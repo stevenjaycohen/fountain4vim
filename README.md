@@ -43,6 +43,8 @@ To Import the LibreOffice Templates:
 
 ### What is Fountain?
 
+[Fountain](https://fountain.io/) allows you to write screenplays in any text editor on any device. Because it’s just text, it’s portable and future-proof.
+
 ### Writing in Fountain
 
 ### Exporting to LibreOffice
