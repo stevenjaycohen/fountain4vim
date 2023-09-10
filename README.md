@@ -71,7 +71,7 @@ map <silent><leader>xm <esc>:!cmark % > /tmp/%:r.html<cr>:!libreoffice -o /tmp/%
 
 ## Installation
 
-Mostly, it follows the install for a standard Vim plugin:
+Mostly, this is a typical Vim plugin:
 
 ~~~
 doc/
