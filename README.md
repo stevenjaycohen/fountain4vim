@@ -8,6 +8,32 @@ Two wonderful [Fountain](https://fountain.io) Plugins for Vim have been unmainta
 
 This project seeks to combine their functionality and extend where possible.
 
+The changes so far, include:
+
+### Syntax
+
+#### Added Transitions
+
+* Ends with " OUT." – `FADE OUT.` `IRIS OUT.`
+* Ends with " IN." – `FADE IN.` `IRIS IN.`
+* Starts with "CUT TO " – `CUT TO BLACK.`
+* `END CREDITS:`
+* `FREEZE FRAME:`
+* `INTERCUT WITH:`
+* `OPENING CREDITS:`
+* `SPLIT SCREEN:`
+* `STOCK SHOT:`
+* `TIME CUT:`
+* `TITLE OVER:`
+* Any single all-caps word with no spaces but with a colon – `WIPE:` `PRE-LAP:` `DISSOLVE:`
+
+### Added File Navigation
+
+* `]]` / `[[` – Jump Between Scene Headings & Notes
+* `[]` / `][` – Jump Between Sections & Notes
+
+(I included `[[Notes]]` in that navigation since they tend to be used to mark places that need to be revisited.) 
+
 ## Background
 
 ### What is Fountain?
