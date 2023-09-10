@@ -49,4 +49,24 @@ Taking its cues from [Markdown](https://en.wikipedia.org/wiki/Markdown), Fountai
 
 ### Writing in Vim with Fountain
 
+### Why use LibreOffice?
+
+Exporting to an editable format instead of directly to PDF allows me to review the content graphically before "signing off" on the final, un-editable PDF. Also, the LibreOffice PDF Export Tool has all of the options that I would ever need. So, there is no reason to reinvent the wheel and build yet another PDF exporter.
+
 ### Exporting to LibreOffice
+
+I added the following to my `.vimrc`:
+
+~~~
+"eXport Fountain (LibreOffice)
+map <silent><leader>xf <esc>:FountainFlow<cr>:LibreOffice<cr>
+let g:flow_directory = $HOME.'/Documents/vim-fountain/flowfiles/'
+~~~
+
+The two functions are `:FountainFlow` and `:LibreOffice`. Instead of calling these separately, I have connected the two will a single command.
+
+`FountainFlow` parses the current file and fills the current buffer with an HTML version of the file.
+
+`LibreOffice` opens the current file in LibreOffice (Writer in this case).
+
+You can press `DELETE` to delete the HTML and return to your original document.
