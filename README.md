@@ -97,7 +97,7 @@ Right now, the Syntax Highlighter recognizes every Standard Transition that I co
 
 Exporting to an editable format allows me to review the content graphically before _signing off_ on the final PDF.
 
-And, the LibreOffice PDF Export Tool has all of the options that I would ever need. So, there is no reason to reinvent the wheel and build yet another PDF exporter.
+And, the LibreOffice PDF Export Tool has all of the options that I would ever need.
 
 Also, I do a similar thing with Markdown files using `cmark` to translate:
 
