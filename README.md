@@ -27,7 +27,7 @@ syntax/
 
 Remember to open vim and `:helptags ALL` to generate the new documentation.
 
-You will also need to add this variable to your `.vimrc`
+You will also need to add this variable to your `.vimrc` pointing to your flowfiles folder.
 
 ~~~
 let g:flow_directory = $HOME.'/path/to/flowfiles/'
