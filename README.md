@@ -6,7 +6,7 @@ Two wonderful [Fountain](https://fountain.io) Plugins for Vim have been unmainta
 * [Fountain Flow](https://github.com/vim-scripts/fountainflow.vim)
   (A Fountain Exporter written in VimScript)
 
-This project combines the functionality of the two and extends them, where possible.
+This project seeks to combine their functionality and extend where possible.
 
 ## Installation
 
