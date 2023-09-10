@@ -89,7 +89,7 @@ endfunction
 
 The plugin will automatically identify any file ending with .fountain and highlight all of the elements (Scene Headings, Actions, Characters, Dialogue, Parentheticals, Lyrics, Transitions, etc).
 
-Right now, the Syntax Highlighter recognizes every standard Transition that I could find. I will be working on adding that functionality to the export function. So, if your Transition does not render in the output, follow the Fountain Standard of using a `>` (example: >MYTRANSITION) until I can add it to the code.
+Right now, the Syntax Highlighter recognizes every Standard Transition that I could find. I will be working on adding that functionality to the export function. So, if your Transition does not render in the output, follow the Fountain Standard of using a `>` (example: >MYTRANSITION) until I can add it to the code.
 
 ### Why use LibreOffice?
 
