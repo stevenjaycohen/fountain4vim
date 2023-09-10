@@ -23,7 +23,7 @@ The changes so far, include:
 * `STOCK SHOT:`
 * `TIME CUT:`
 * `TITLE OVER:`
-* Any single ALL-CAPS _word_ with no spaces but with a colon – `WIPE:` `PRE-LAP:` `DISSOLVE:`
+* Any single ALL-CAPS _word_ with no spaces ending with a colon – `WIPE:` `PRE-LAP:` `DISSOLVE:`
 
 ### Added File Navigation
 
