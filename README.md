@@ -122,4 +122,4 @@ The two functions are `:FountainFlow` and `:LibreOffice`. Instead of calling the
 
 `LibreOffice` opens the current file in LibreOffice (Writer in this case).
 
-You can press `DELETE` to delete the HTML and return to your original document.
+You can press `DELETE` to delete the HTML and return to your original document in Vim.
