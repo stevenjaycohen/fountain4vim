@@ -39,7 +39,7 @@ To Import the LibreOffice Templates:
 2. Open File > Templates > Manage Templates
 3. In the Templates Window, find the Manage Dropdown and choose Import
 
-## Usage
+## Background
 
 ### What is Fountain?
 
@@ -87,7 +87,9 @@ function! CodeMode()
 endfunction
 ~~~
 
-### Writing with Fountain
+## Usage
+
+### Writing with Fountain in Vim
 
 The plugin will automatically identify any file ending with .fountain and highlight all of the elements (Scene Headings, Actions, Characters, Dialogue, Parentheticals, Lyrics, Transitions, etc).
 
