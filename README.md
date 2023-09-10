@@ -25,6 +25,8 @@ syntax/
   fountain.vim
 ~~~
 
+Remember to open vim and `:helptags ALL` to generate the new documentation.
+
 You will also need to add this variable to your `.vimrc`
 
 ~~~
