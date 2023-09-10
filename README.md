@@ -41,4 +41,8 @@ To Import the LibreOffice Templates:
 
 ## Usage
 
-Coming Soon...
+### What is Fountain?
+
+### Writing in Fountain
+
+### Exporting to LibreOffice
