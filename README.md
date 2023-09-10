@@ -87,14 +87,6 @@ function! CodeMode()
 endfunction
 ~~~
 
-## Usage
-
-### Writing with Fountain in Vim
-
-The plugin will automatically identify any file ending with .fountain and highlight all of the elements (Scene Headings, Actions, Characters, Dialogue, Parentheticals, Lyrics, Transitions, etc).
-
-Right now, the Syntax Highlighter recognizes every Standard Transition that I could find. I will be working on adding that functionality to the export function. So, if your Transition does not render in the output, follow the Fountain Standard of using a `>` (example: >MYTRANSITION) until I can add it to the code.
-
 ### Why use LibreOffice?
 
 Exporting to an editable format allows me to review the content graphically before _signing off_ on the final PDF.
@@ -107,6 +99,14 @@ Also, I do a similar thing with Markdown files using `cmark` to translate:
 "eXport Markdown (LibreOffice)
 map <silent><leader>xm <esc>:!cmark % > /tmp/%:r.html<cr>:!libreoffice -o /tmp/%:r.html<cr>
 ~~~
+
+## Usage
+
+### Writing with Fountain in Vim
+
+The plugin will automatically identify any file ending with .fountain and highlight all of the elements (Scene Headings, Actions, Characters, Dialogue, Parentheticals, Lyrics, Transitions, etc).
+
+Right now, the Syntax Highlighter recognizes every Standard Transition that I could find. I will be working on adding that functionality to the export function. So, if your Transition does not render in the output, follow the Fountain Standard of using a `>` (example: >MYTRANSITION) until I can add it to the code.
 
 ### Exporting to LibreOffice
 
