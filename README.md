@@ -93,7 +93,9 @@ Right now, the Syntax Highlighter recognizes every Standard Transition that I co
 
 ### Why use LibreOffice?
 
-Exporting to an editable format instead of directly to PDF allows me to review the content graphically before "signing off" on the final, un-editable PDF. Also, the LibreOffice PDF Export Tool has all of the options that I would ever need. So, there is no reason to reinvent the wheel and build yet another PDF exporter.
+Exporting to an editable format instead of directly to PDF allows me to review the content graphically before "signing off" on the final PDF.
+
+Also, the LibreOffice PDF Export Tool has all of the options that I would ever need. So, there is no reason to reinvent the wheel and build yet another PDF exporter.
 
 I do a similar thing with Markdown files using `cmark` to translate:
 
