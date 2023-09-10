@@ -8,37 +8,6 @@ Two wonderful [Fountain](https://fountain.io) Plugins for Vim have been unmainta
 
 This project seeks to combine their functionality and extend where possible.
 
-## Installation
-
-Mostly, it follows the install for a standard Vim plugin:
-
-~~~
-doc/
-  fountain.txt
-ftdetect/
-  fountain.vim
-ftplugin/
-  fountain.vim
-plugin/
-  fountain.vim
-syntax/
-  fountain.vim
-~~~
-
-Remember to open vim and `:helptags ALL` to generate the new documentation.
-
-You will also need to add this variable to your `.vimrc` pointing to your flowfiles folder.
-
-~~~vimrc
-let g:flow_directory = $HOME.'/path/to/flowfiles/'
-~~~
-
-To Import the LibreOffice Templates:
-
-1. Open LibreOffice Writer
-2. Open File > Templates > Manage Templates
-3. In the Templates Window, find the Manage Dropdown and choose Import
-
 ## Background
 
 ### What is Fountain?
@@ -99,6 +68,37 @@ Also, I do a similar thing with Markdown files using `cmark` to translate:
 "eXport Markdown (LibreOffice)
 map <silent><leader>xm <esc>:!cmark % > /tmp/%:r.html<cr>:!libreoffice -o /tmp/%:r.html<cr>
 ~~~
+
+## Installation
+
+Mostly, it follows the install for a standard Vim plugin:
+
+~~~
+doc/
+  fountain.txt
+ftdetect/
+  fountain.vim
+ftplugin/
+  fountain.vim
+plugin/
+  fountain.vim
+syntax/
+  fountain.vim
+~~~
+
+Remember to open vim and `:helptags ALL` to generate the new documentation.
+
+You will also need to add this variable to your `.vimrc` pointing to your flowfiles folder.
+
+~~~vimrc
+let g:flow_directory = $HOME.'/path/to/flowfiles/'
+~~~
+
+To Import the LibreOffice Templates:
+
+1. Open LibreOffice Writer
+2. Open File > Templates > Manage Templates
+3. In the Templates Window, find the Manage Dropdown and choose Import
 
 ## Usage
 
