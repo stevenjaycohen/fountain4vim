@@ -1,6 +1,6 @@
 # Vim Fountain (CONT'D)
 
-Two wonderful Fountain Plugins for Vim have been unmaintained for a while now:
+Two wonderful [Fountain](https://fountain.io) Plugins for Vim have been unmaintained for a while now:
 * [Vim Fountain](https://github.com/vim-scripts/fountain.vim)
   (A Syntax Highlighter for Fountain Files)
 * [Fountain Flow](https://github.com/vim-scripts/fountainflow.vim)
