@@ -114,7 +114,7 @@ map <silent><leader>xf <esc>:FountainFlow<cr>:LibreOffice<cr>
 let g:flow_directory = $HOME.'/Documents/vim-fountain/flowfiles/'
 ~~~
 
-The two functions are `:FountainFlow` and `:LibreOffice`. Instead of calling these separately, I have connected the two will a single command.
+The two functions are `:FountainFlow` and `:LibreOffice`. Instead of calling these separately, I have connected the two with a single command.
 
 `FountainFlow` parses the current file and fills the current buffer with an HTML version of the file.
 
