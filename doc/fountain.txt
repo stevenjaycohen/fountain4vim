@@ -1,0 +1,251 @@
+*fountainflow.txt*    Fountain syntax converter    Last change: 2023-10-01
+
+Fountain Flow                               *fountainflow*
+by Steven Jay Cohen <steven@stevenjaycohen.com>
+For feedback and notes, please visit https://stevenjaycohen.com?s=vim-fountain
+
+INTRODUCTION                                |fountainflow-introduction|
+BASIC OPERATION                             |fountainflow-basic|
+LIBREOFFICE                                 |fountainflow-libreoffice|
+INSTALLATION                                |fountainflow-installation|
+COMMANDS                                    |fountainflow-commands|
+SETTINGS                                    |fountainflow-settings|
+SUPPORTED SYNTAX                            |fountainflow-supported-syntax|
+RECOMMENDATIONS                             |fountainflow-recommendations|
+
+==============================================================================
+INTRODUCTION                                *fountainflow-introduction*
+
+This script uses Regex and Vimscript to convert FOUNTAIN screenplay files into
+HTML that can then be sent to LibreOffice Writer as a fully-formed screenplays,
+without the need for any further editing or formatting, apart from invoking
+page numbers. A few editable templates and a CSS file control the styles.
+
+All FOUNTAIN syntax is supported, although at the moment dual dialogue is
+limited to one line per character. The title page, along with the header and
+footer, are controlled with editable templates.
+
+Page numbering can be easily set up simply by loading an included template. For
+special situations, instructions are posted on this plugin's website:
+    
+    https://vimwriter.blogspot.com/p/fountain-flow.html
+
+BASIC OPERATION                             *fountainflow-basic*
+
+* Command :Flow converts Fountain syntax file to HTML
+* Press <enter> to send the HTML file to LibreOffice
+* Run the PageNumber macro in LibreOffice
+* Resave as an OpenDocument file, or convert to PDF
+
+LIBREOFFICE                                 *fountainflow-libreoffice*
+
+There are some inconsistencies with the word processor's operation that I
+obviously have no control over. When the converted HTML file is sent to
+LibreOffice Writer via this script, it should appear to be a perfectly
+formatted screenplay; however, opening the HTML file from LibreOffice seems to
+break formatting. 
+
+INSTALLATION                                *fountainflow-installation*
+
+The plugin consists of one file, fountainflow.vim. The only required
+installation is dropping that file in your plugin folder. Everything else is
+optional.
+
+The plugin comes with a folder named 'flow', which contains templates. This can
+be placed anywhere, so long as its location is updated in the settings (see
+|g:flow_directory|).  However, the plugin file will still function without it,
+using default code in place of the templates.
+
+COMMANDS                                    *fountainflow-commands*
+
+                                            *fountainflow-:FountainFlow*
+                                            *fountainflow-:FF*
+:FountainFlow     Convert file with FOUNTAIN extension to HTML.
+:FF               Alias command.
+
+                                            *fountainflow-:LibreOffice*
+:LibreOffice      This simply invokes LibreOffice's command line; it will
+                  unconditionally send any file to LibreOffice Writer. Upon
+                  converting to HTML, this can be done simply by pressing
+                  <enter>. See |fountainflow-mappings|
+
+                                            *fountainflow-:FlowDirectory*
+:FlowDirectory    Opens the file structure where the templates are kept. Upon
+                  converting to HTML, this can be done simply by pressing
+                  <home>. See |fountainflow-mappings|
+
+MAPPINGS                                    *fountainflow-mappings*
+
+A few shortcuts are available immediately after converting the FOUNTAIN file to
+HTML, and only within the HTML file's buffer.
+
+<enter>           Send the converted output to LibreOffice Writer.
+
+<home>            Go to templates. Opens the directory where the templates are
+                  kept. Especially useful if you run the conversion, then find
+                  you need to tweak the title page or styles.
+
+<backspace>       Return to the original file in the same tab.
+
+<tab>             Open the original file in another tab.
+
+<space>           Open the original file in split view.
+
+<delete>          Return to the original file and delete the HTML. This enables
+                  quick housecleaning, as the HTML file is largely intended
+                  simply as a temporary file for transferring the information
+                  to LibreOffice.
+
+<esc>             Clear the mappings. Use this if you want to edit the HTML
+                  file.
+
+SETTINGS                                    *fountainflow-settings*
+
+                                            *g:flow_extensions*
+List of allowable Fountain file extensions. The conversion script will not run
+unless this file type is present in the current buffer. The default value is
+"txt, fountain, spmd". Separate the extensions with a space. Commas are OK.
+
+    let g:flow_extensions = "txt, fountain, spmd"
+
+                                            *g:flow_directory*
+This is the directory the script must access for templates and formatting. It
+doesn't matter where you put the folder, but you should supply the full path.
+The current configuration is for a Linux file system. Please include all
+slashes, including the trailing slash.
+
+    let g:flow_directory = '~/.vim/plugin/fountain/'
+
+                                            *g:flow_style_method*
+The method of applying the stylesheet to the HTML, either 'embed' or 'link'.
+The default is to embed, meaning that the CSS will be appended directly into
+the HTML file. This is the safest method. 
+
+    let g:flow_style_method = "embed"
+
+                                            *g:flow_title_page*
+                                            *g:flow_header*
+                                            *g:flow_footer*
+                                            *g:flow_style_sheet*
+The source files, templates and stylesheet. You shouldn't have to change these,
+unless you want to experiment and leave the default files in place.
+
+    let g:flow_title_page = "screenplayTitlePage.html"
+    let g:flow_header = "screenplayHeader.html"
+    let g:flow_footer = "screenplayFooter.html"
+    let g:flow_style_sheet = "screenplayStyle.css"
+
+                                            *g:flow_dual_processing*
+Processing dual dialogue (two characters speaking at once) is optional, because
+(to be honest) our regex doesn't handle it very well. We expect to make some
+improvements, but since this might not be used frequently in your scripts
+anyway, you can optionally turn it off to avoid the extra lag in processing
+time. The options are 'yes' and 'no'.
+
+    let g:flow_dual_processing = "yes"
+
+                                            *g:flow_line_style*
+                                            *g:flow_line_style_spaced*
+The way CSS governs text within LibreOffice is tricky. Paragraphs honor
+left/right margins, but vertical margins seem wholly dependent on the page or
+section setting. It seems the only way to overrule this is to insert the CSS on
+a line-by-line basis, so the following defines the margin of lines that should
+not have a visible space between them, and lines that should have one. The
+first style should not have to be changed, but you may need to adjust the
+'spaced' line in accordance to the font you use.
+
+    let g:flow_line_style = "margin-top: 0pt; margin-bottom: 0pt;"
+    let g:flow_line_style_spaced = "margin-top: 18pt; margin-bottom: 0pt;"
+ 
+SUPPORTED SYNTAX                            *fountainflow-supported-syntax*
+
+In short, all Fountain syntax is supported. More accurately, we think we've got
+it all covered. There will likely be issues in this early version that need
+fixing.
+
+DUAL DIALOGUE is supported, but mentioned first because it has the weakest
+support. At the moment, only one line of dialogue per character, plus optional
+parenthetical, is supported. The following will work:
+
+        BOB
+        But you--
+
+        RAY ^
+        (flushed)
+        Dammit, let me finish!
+
+INDENTATION is supported, somewhat. Tabs and blocks of spaces in multiples of
+four will be converted into HTML entities in order to preserve indentation
+where indicated in ACTION. The 'four' stipulation simply means that a line that
+begins with one or two spaces will not be indented, while nine spaces will be
+interpreted as eight. 
+
+Other lesser syntax is supported, and tagged in the HTML output, but may not
+yet be adequately defined by the default CSS. In particular, I have no idea
+what the proper format is for LYRICS, but lyrics are tagged and honored as a
+particular class which can be styled as you see fit.
+
+Forced syntax is supported. The following blocks of dialogue will work.
+
+        DAN
+        But you--
+
+        @McGREGOR
+        (flushed)
+        Dammit, let people finish!
+
+TRANSITIONS end with 'TO:', or can be forced with a greater-than. SCENE
+HEADINGS can be forced with a leading period.
+
+        CUT TO:
+
+        EXT. THE ESTATE - DAY
+
+        >WIPE
+
+        .INT. McGREGOR'S LAB - DAY
+
+BONEYARDS, NOTES, and SECTIONS are for the writer's use, and are all deleted by
+default. We are experimenting with a collaboration mode, which sounds a bit
+fancy, but just means leaving all that stuff in. It's 'not ready for
+prime-time', yet. In particular, there are some issues with notes. Technically,
+Fountain NOTES can be converted into HTML comments which are then read by
+LibreOffice as nice little margin notes, but in practice it gets messy.
+
+PAGE BREAKS are turned into HTML tags which are, in fact, interpreted by
+LibreOffice as real-life, honest-to-gosh page breaks.
+
+EMPHASIS and UNDERLINING is supported, and hopefully will perform OK. This is
+an advanced type of markup, and requires us to essentially emulate Markdown.
+
+Complete information on Fountain syntax can be found at
+    http://fountain.io/syntax
+
+RECOMMENDATIONS                             *fountainflow-recommendations*
+
+Screenplays require a courier font, and we recommend Courier Prime, which was
+designed to be compatible with Final Draft. If Courier Prime is not present,
+the default styling falls back on Courier New. Edit the CSS file to reflect
+your preference.
+
+    http://www.fontsquirrel.com/fonts/courier-prime
+
+FOuntain syntax allows the use of Markdown-style headers for internal
+(non-printing) organization, so VOoM is an excellent tool to use while writing
+your screenplay.
+
+    http://www.vim.org/scripts/script.php?script_id=2657
+
+We are preparing two new files to further enhance the writing experience: a new
+and improved Fountain syntax file, and a general writer's aid (Ink Flow) which
+will include some helpful functions and settings.
+
+Fountain Flow is donationware, and we really appreciate any and all support.
+Please consider hitting the donation button at your blog. There you will also
+find notes and screenshots and stuff.
+
+    https://stevenjaycohen.com?s=fountain.vim
+
+
+vi: et sw=2 ts=2
+
