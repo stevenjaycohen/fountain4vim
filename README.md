@@ -53,7 +53,7 @@ To Import the LibreOffice Templates:
 
 I like distraction free writing. And, a terminal is about as distraction free as you can get. Writing in plain text not only keeps me from playing with fonts, etc, but it also means that what I write is easily portable to any new program/systems/etc.
 
-For more information, see [writingvim](https://github.com/phantomdiorama/writingvim)
+For more information, see [writingvim](https://github.com/phantomdiorama/writingvim).
 
 The code below (from my `.vimrc`) allows me to toggle easily between Coding and Writing:
 
