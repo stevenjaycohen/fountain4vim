@@ -1,0 +1,88 @@
+Title:  Screenplay with synopsis template
+Credit: Written by
+Author: Saeger Ryman
+
+= Template for a Fountain screenplay with a synopsis page.
+
+====
+
+EXT. VALHALLA - ETERNAL DAY
+
+RYMAN
+Fountain Flow provides the styles when the script is first processed. This template is strictly for setting the page numbers of your screenplay.
+
+The way the page numbering works is that the first few pages are defined in this way:
+
+Page style: First page --> Next style: Synopsis Page
+Page style: Synopsis Page --> Next style: First Script Page
+Page style: First Script Page --> Next style: HTML
+Page style: HTML
+
+A header is added to the HTML pages alone, and the page number offset. The aim is for the page numbers to begin on the second page of the script.
+
+RYMAN (CONT'D)
+As long as your document matches the number of pages at the head, applying the page numbers should be easy. Here's how.
+(clears throat)
+Go to Styles and Formatting -- press F11 -- and find an icon in the top right corner with a PARAGRAPH SYMBOL. Click on that and select LOAD STYLES.
+
+Check off all the boxes below, or at least PAGES and NUMBERING. Then click the FROM FILE button in the lower left corner of the LOAD STYLES dialogue, and select this file.
+
+RYMAN (CONT'D)
+The result should be automatic page numbering, starting on the second page of your script.
+
+FILLER enters, as there's nothing left to say, and we want enough text to spill over to page two.
+
+FILLER
+I've got a coffee pot for a heart.
+
+RYMAN
+That's a strange anatomical note. You mean you have a hot heart?
+
+FILLER
+I could draw the analogy out some more. I've got a pencil.
+
+RYMAN
+No need to explain. I've got a rice steamer for a brain.
+
+FILLER
+Hold on, I'll demonstrate.
+
+FILLER fills his mouth with coffee grounds, then pours hot water down his throat and gargles. Meanwhile, INGENUE floats down holding a small balloon.
+
+RYMAN
+Very interesting.
+
+INGENUE
+Excuse me. Am I in the right place? I've got a microwave oven for a butt. You wouldn't believe the things that pop out!
+
+RYMAN
+What d'you got?
+
+INGENUE
+Let's see...
+
+INGENUE reaches behind her, and we hear a click and the squeak of a door opening. She pulls out a little plate of steamed veggies.
+
+RYMAN
+Perfect!
+
+RYMAN lifts his hair off his head, revealing a brain-sized lump of white rice where his brains should be.
+
+RYMAN (CONT'D)
+Do you mind?
+
+INGENUE slides the vegetables in and uses a big spoon to stir them. RYMAN repositions his hair, as FILLER surprises them with two steaming hot cups of coffee.
+
+FILLER
+We've reached the end of page two, so my work here is done.
+
+>_**THE END**_<
+
+
+
+
+
+
+
+
+

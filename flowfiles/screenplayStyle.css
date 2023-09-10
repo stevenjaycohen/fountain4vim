@@ -1,0 +1,126 @@
+@page:first
+{
+    margin: 0.75in 1in 0.75in 1.5in;
+}
+@page
+{
+    margin: 0.75in 1in 0.75in 1.5in;
+}
+p
+{
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    background: transparent;
+    line-height: 13pt;
+}
+.normal
+{
+    margin-top: 13pt;
+    margin-bottom: 0pt;
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    background: transparent;
+    line-height: 13pt;
+}
+body
+{
+    width: 8.5in;
+    background: #fff;
+    font-family: 'Courier Prime', 'courier new';
+    font-size: 12pt;
+}
+.SceneHeading
+{
+    margin-top: 13pt;
+    page-break-before: auto;
+    page-break-after: avoid;
+}
+.Action, .Synopsis
+{
+    margin-top: 13pt !important;
+    orphans: 3;
+    widows: 3;
+} 
+.Transitional
+{
+    margin-top: 13pt;
+    margin-left: 4in;
+}
+.Character
+{
+    margin-left: 2in;
+    page-break-before: auto;
+    page-break-after: avoid;
+}
+.Parenthetical
+{
+    margin-left: 1.5in;
+    margin-right: 1.5in;
+    page-break-after: avoid;
+}
+.Dialogue
+{
+    margin-left: 1in;
+    margin-right: 1in;
+    orphans: 2;
+    widows: 2;
+    page-break-before: avoid;
+    page-break-after: auto;
+}
+.DualCharacter
+{
+    margin-left: 1in;
+    page-break-before: auto;
+    page-break-after: avoid;
+}
+.DualParenthetical
+{
+    margin-left: 0.6in;
+    margin-right: 0.6in;
+    page-break-after: avoid;
+}
+.DualDialogue
+{
+    margin-left: 0.125in;
+    margin-right: 0.125in;
+    orphans: 2;
+    widows: 2;
+    page-break-before: avoid;
+    page-break-after: auto;
+}
+#TitlePage
+{
+    margin-right: 1.5in;
+    margin-left: 1.5in;
+    text-align: center;
+    margin-top: 13pt;
+    margin-bottom: 0pt;
+}
+#TitlePageNotes
+{
+    margin-top: 13pt;
+}
+#Spacer1
+{
+    margin-top: 0.5in;
+}
+#Spacer2
+{
+    margin-top: 3in;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-family: serif;
+}
+.Notes
+{
+    font-family: serif;
+    color: #777;
+}
+.Boneyard
+{
+    text-decoration: line-through;
+}
+
