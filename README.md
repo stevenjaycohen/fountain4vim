@@ -10,7 +10,7 @@ This project combines the functionality of the two and extends them, where possi
 
 ## Installation
 
-Mostly, it follows a standard Vim plugin
+Mostly, it follows the install for a standard Vim plugin:
 
 ~~~
 doc/
