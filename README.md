@@ -106,7 +106,7 @@ map <silent><leader>xm <esc>:!cmark % > /tmp/%:r.html<cr>:!libreoffice -o /tmp/%
 
 I added the following to my `.vimrc`:
 
-~~~
+~~~vimrc
 "eXport Fountain (LibreOffice)
 map <silent><leader>xf <esc>:FountainFlow<cr>:LibreOffice<cr>
 let g:flow_directory = $HOME.'/Documents/vim-fountain/flowfiles/'
