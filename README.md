@@ -47,6 +47,6 @@ To Import the LibreOffice Templates:
 
 Taking its cues from [Markdown](https://en.wikipedia.org/wiki/Markdown), Fountain files are eminently readable. When special syntax is required, it is straightforward and intuitive.
 
-### Writing in Fountain
+### Writing in Vim with Fountain
 
 ### Exporting to LibreOffice
