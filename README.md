@@ -1,4 +1,4 @@
-# Vim Fountain (CONT'D)
+# Vim Fountain (CONT’D)
 
 Two wonderful [Fountain](https://fountain.io) Plugins for Vim have been unmaintained for a while now:
 * [Vim Fountain](https://github.com/vim-scripts/fountain.vim)
