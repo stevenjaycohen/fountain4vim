@@ -124,7 +124,7 @@ The two functions are `:FountainFlow` and `:LibreOffice`. Instead of calling the
 
 You can press `DELETE` to delete the HTML fie and return to your original document in Vim.
 
-Back in `LibreOffice`:
+Back in LibreOffice:
 
 1. find the Menu Item marked `Styles` > `Load Styles from Template`
 1. Check the boxes for `Paragraph and Character`, `List`, `Page`, and `Overwrite`
