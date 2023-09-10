@@ -10,9 +10,7 @@ This project seeks to combine their functionality and extend where possible.
 
 The changes so far, include:
 
-### Syntax
-
-#### Added Transitions
+### Added Transitions
 
 * Ends with " OUT." – `FADE OUT.` `IRIS OUT.`
 * Ends with " IN." – `FADE IN.` `IRIS IN.`
