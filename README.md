@@ -123,3 +123,11 @@ The two functions are `:FountainFlow` and `:LibreOffice`. Instead of calling the
 `LibreOffice` opens the current file in LibreOffice (Writer in this case).
 
 You can press `DELETE` to delete the HTML fie and return to your original document in Vim.
+
+Back in `LibreOffice`:
+
+1. find the Menu Item marked `Styles` > `Load Styles from Template`
+1. Check the boxes for `Paragraph and Character`, `List`, `Page`, and `Overwrite`
+1. Choose one of the two templates that you imported earlier
+1. Then click `OK`
+
