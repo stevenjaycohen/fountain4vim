@@ -29,7 +29,7 @@ Remember to open vim and `:helptags ALL` to generate the new documentation.
 
 You will also need to add this variable to your `.vimrc` pointing to your flowfiles folder.
 
-~~~
+~~~vimrc
 let g:flow_directory = $HOME.'/path/to/flowfiles/'
 ~~~
 
@@ -47,7 +47,47 @@ To Import the LibreOffice Templates:
 
 Taking its cues from [Markdown](https://en.wikipedia.org/wiki/Markdown), Fountain files are eminently readable. When special syntax is required, it is straightforward and intuitive.
 
-### Writing in Vim with Fountain
+### Why Write in Vim?
+
+I like distraction free writing. And, a terminal is about as distraction free as you can get. Writing in plain text not only keeps me from playing with fonts, etc, but it also means that what I write is easily portable to any new program/systems/etc.
+
+The code below (from my `.vimrc`) allows me to toggle easily between Coding and Writing:
+
+~~~vimrc
+"Toggle Writing/Code
+map <silent><leader><leader> <esc>:call ToggleWriteCode()<cr>
+function! ToggleWriteCode()
+  if &foldcolumn=='0'
+    :call WriteMode()
+  else
+    :call CodeMode()
+  endif
+endfunction
+"Hide line numbers, activate spellcheck, increase left margin
+function! WriteMode()
+  exec('set nonumber')
+  exec('set spell spelllang=en')
+  exec('map j gj') 
+  exec('map k gk')
+  exec('set foldcolumn=1')
+  exec('set linespace=11')
+endfunction
+"Show line numbers, deactivate spellcheck, reduce left margin
+function! CodeMode()
+  exec('set number')
+  exec('set nospell')
+  exec('map j j') 
+  exec('map k k')
+  exec('set foldcolumn=0')
+  exec('set linespace=0')
+endfunction
+~~~
+
+### Writing with Fountain
+
+The plugin will automatically identify any file ending with .fountain and highlight all of the elements (Scene Headings, Actions, Characters, Dialogue, Parentheticals, Lyrics, Transitions, etc).
+
+Right now, the Syntax Highlighter recognizes every standard Transition that I could find. I will be working on adding that functionality to the export function. So, if your Transition does not render in the output, follow the Fountain Standard of using a `>` (example: >MYTRANSITION) until I can add it to the code.
 
 ### Why use LibreOffice?
 
