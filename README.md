@@ -34,7 +34,7 @@ I included `[[Notes]]` in those navigation since they tend to be used to mark pl
 
 ### Auto-Correct
 
-* Using an abbreviations file for character names allows you to type `george` and have it correct to `GEORGE`, saving you needing to capitalize recuring characters
+* Using an abbreviations file for character names allows you to type `george` and have it correct to `GEORGE`, saving you needing to capitalize recuring character names
 * Like a standard abbreviations file, adding common misspellings to this file works as well
 
 ## Background
