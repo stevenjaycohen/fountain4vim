@@ -117,7 +117,7 @@ syntax/
 
 Remember to open vim and `:helptags ALL` to generate the new documentation.
 
-You will also need to add this variable to your `.vimrc` pointing to your flowfiles folder.
+You will need to add this to your `.vimrc` if you move the `fountain` folder.
 
 ~~~vimrc
 let g:flow_directory = $HOME.'/path/to/flowfiles/'
