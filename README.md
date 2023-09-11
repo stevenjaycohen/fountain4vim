@@ -30,7 +30,7 @@ The changes so far, include:
 * `]]` / `[[` – Jump Between Scene Headings & Notes
 * `[]` / `][` – Jump Between Sections & Notes
 
-(I included `[[Notes]]` in that navigation since they tend to be used to mark places that need to be revisited.) 
+I included `[[Notes]]` in that navigation since they tend to be used to mark places that need to be revisited.
 
 ### Auto-Correct
 
