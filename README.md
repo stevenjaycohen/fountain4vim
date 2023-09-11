@@ -35,7 +35,7 @@ I included `[[Notes]]` in those navigation since they tend to be used to mark pl
 ### Auto-Correct
 
 * Using an abbreviations file for character names allows you to type `george` and have it correct to `GEORGE`, saving you needing to capitalize recuring characters
-* Like a standard abbreviations file, adding common misspellings works too
+* Like a standard abbreviations file, adding common misspellings to this file works as well
 
 ## Background
 
@@ -91,7 +91,7 @@ Exporting to an editable format allows me to review the content graphically befo
 
 And, the LibreOffice PDF Export Tool has all of the options that I would ever need.
 
-Also, I do a similar thing with Markdown files using `cmark` to translate:
+Also, I already do a similar thing with Markdown files using `cmark` to translate those files:
 
 ~~~vimrc
 "eXport Markdown (LibreOffice)
