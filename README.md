@@ -34,7 +34,8 @@ The changes so far, include:
 
 ### Auto-Correct
 
-* Using a custom abbreviations file to auto-correct character names, etc
+* Using an abbreviations file for character names allows you to type `george` and have it correct to `GEORGE`, saving you needing to capitalize recuring characters
+* Like a standard abbreviations file, adding common misspellings works too
 
 ## Background
 
