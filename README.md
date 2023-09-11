@@ -32,6 +32,10 @@ The changes so far, include:
 
 (I included `[[Notes]]` in that navigation since they tend to be used to mark places that need to be revisited.) 
 
+### Auto-Correct
+
+* Using a custom abbreviations file to auto-correct character names, etc
+
 ## Background
 
 ### What is Fountain?
