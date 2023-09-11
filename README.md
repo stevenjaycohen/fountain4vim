@@ -1,7 +1,7 @@
-# Vim Fountain (CONT’D)
+# Fountain 4 Vim
 
 Two wonderful [Fountain](https://fountain.io) Plugins for Vim have been unmaintained for a while now:
-* [Vim Fountain](https://github.com/vim-scripts/fountain.vim)
+* [Fountain](https://github.com/vim-scripts/fountain.vim)
   (A Syntax Highlighter for Fountain Files)
 * [Fountain Flow](https://github.com/vim-scripts/fountainflow.vim)
   (A Fountain Exporter written in VimScript)
