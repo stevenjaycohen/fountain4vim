@@ -144,7 +144,6 @@ I added the following to my `.vimrc`:
 ~~~vimrc
 "eXport Fountain (LibreOffice)
 map <silent><leader>xf <esc>:FountainFlow<cr>:LibreOffice<cr>
-let g:flow_directory = $HOME.'/Documents/vim-fountain/flowfiles/'
 ~~~
 
 The two functions are `:FountainFlow` and `:LibreOffice`. Instead of calling these separately, I have connected the two with a single command.
