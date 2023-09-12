@@ -1,11 +1,11 @@
  "Character Names for Fountain
- ia sidra SIDRA
- ia becky BECKY
- ia paige PAIGE
- ia cynthia CYNTHIA
- ia maryam MARYAM
+ ia <buffer> sidra SIDRA
+ ia <buffer> becky BECKY
+ ia <buffer> paige PAIGE
+ ia <buffer> cynthia CYNTHIA
+ ia <buffer> maryam MARYAM
  "The Company
- ia datewerx DateWerx
- ia dateworx DateWerx
- ia datewerks DateWerx
- ia dateworks DateWerx
+ ia <buffer> datewerx DateWerx
+ ia <buffer> dateworx DateWerx
+ ia <buffer> datewerks DateWerx
+ ia <buffer> dateworks DateWerx
