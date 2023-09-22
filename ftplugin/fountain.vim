@@ -4,3 +4,5 @@ map <silent> ]] <esc>/^INT.*\\|^EXT.*\\|^I\/E.*\\|^E\/I.*\\|[[.*\]\]<CR>
 "Jump Between Sections & Notes
 map <silent> ][ <esc>?^#.*\n\\|[[.*\]\]<CR>
 map <silent> [] <esc>/^#.*\n\\|[[.*\]\]<CR>
+"Integrate Markdown Research Files
+set suffixesadd+=.md
