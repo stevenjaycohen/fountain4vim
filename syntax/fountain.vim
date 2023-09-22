@@ -1,10 +1,10 @@
 " Vim syntax file
-" Language:	Fountain screenplay
+" Language:     Fountain screenplay
 " File: .fountain, .spmd, .txt
 " Reference: http://fountain.io/
-" Maintainer:	Steven Jay Cohen <steven@stevenjaycohen.com>
-" Last Change:	October 1, 2023
-" Version: 3.00	
+" Maintainer:   Steven Jay Cohen <steven@stevenjaycohen.com>
+" Last Change:  October 1, 2023
+" Version: 3.00 
 
 if exists("b:current_syntax")
   finish
@@ -18,11 +18,8 @@ syn match fountainCharacter "\(^\s*@\(.*\)\)\|\(^\(\L\)*$\)"
 syn region fountainDialogue matchgroup=fountainCharacter start="\(^\s*@\(.*\)\)\|\(^\(\L\)*$\)" end="^\s*$" contains=fountainCharacter,fountainParenthetical,fountainBoneyard,fountainNotes,fountainBold,fountainUnderlined,fountainItalic,fountainBoldItalic
 syn match fountainParenthetical "^\s*\((.*)\)$" contained contains=fountainBoneyard,fountainNotes
 syn match fountainLyric "^\s*\~\(.*\)$" contained contains=fountainBoneyard,fountainNotes
-syn match fountainTransition "\(^\(\L\)* TO:$\)\|\(^\(\L\)* IN:$\)\|\(^\(\L\)* CREDITS:$\)\|\(^\(\L\)* OUT:$\)" contains=fountainBoneyard,fountainNotes
-syn match fountainTransition1 "\(^\(\L\)* SHOT:$\)\|\(^\(\L\)* FRAME:$\)\|\(^\(\L\)* WITH:$\)\|\(^\(\L\)* SCREEN:$\)" contains=fountainBoneyard,fountainNotes
-syn match fountainTransition2 "\(^\(\L\)* CUT:$\)\|\(^\(\L\)* OVER:$\)" contains=fountainBoneyard,fountainNotes
-"Any UPPERCASE single word with a colon by itself is a Transition
-syn match fountainTransition3 "\(^\(\L\)*:$\)" contains=fountainBoneyard,fountainNotes
+"Any UPPERCASE words with a colon or FADE IN./FADE OUT.
+syn match fountainTransition "\(^\(\L\)*:$\)\|\(^FADE.IN\.$\)\|\(^FADE.OUT\.$\)" contains=fountainBoneyard,fountainNotes
 syn match fountainTransitionForced "^\s*>\(.*\)" contains=fountainBoneyard,fountainNotes
 syn match fountainCentered "^\s*>\(.*\)<" contains=fountainBoneyard,fountainNotes
 syn match fountainUnderlined "_[^_]*_" 
@@ -45,36 +42,33 @@ syn match xLineContinue "\\$" contained
 syn region fountainSceneNumber start="#" end="#" contained
 
 
-hi def link fountainTitlePage		    PreProc
-hi def link fountainSection1 			Underlined
-hi def link fountainSceneHeading	    title
+hi def link fountainTitlePage           PreProc
+hi def link fountainSection1            Underlined
+hi def link fountainSceneHeading        title
 hi def link fountainAction              string
-hi def link fountainCharacter			identifier 
-hi def link fountainDialogue			statement
-hi def link fountainParenthetical		conditional
-hi def link fountainTransition			todo
-hi def link fountainTransition1			todo
-hi def link fountainTransition2			todo
-hi def link fountainTransition3			todo
-hi def link fountainLyric				normal
-hi def link fountainTransitionForced	todo
-hi def link fountainCentered			character
-hi def fountainUnderlined					gui=underline
-hi def fountainItalic						gui=italic cterm=italic	
-hi def fountainBold							gui=bold cterm=bold
-hi def fountainBoldItalic					gui=bold,italic cterm=bold,italic	
-hi def link fountainPagebreak			conditional
-hi def link fountainActionForced		normal
-hi def link fountainNotes				comment
-hi def link fountainBoneyard			nontext	
-hi def link fountainHeader1				CursorLineNr	
-hi def link fountainHeader2				CursorLineNr	
-hi def link fountainHeader3				CursorLineNr	
-hi def link fountainHeader4				CursorLineNr	
-hi def link fountainHeader5				CursorLineNr	
-hi def link fountainHeader6				CursorLineNr	
-hi def link fountainSynopses			number
-hi def link fountainSceneNumber			number	
+hi def link fountainCharacter           identifier 
+hi def link fountainDialogue            statement
+hi def link fountainParenthetical       conditional
+hi def link fountainTransition          todo
+hi def link fountainLyric               normal
+hi def link fountainTransitionForced    todo
+hi def link fountainCentered            character
+hi def fountainUnderlined               gui=underline
+hi def fountainItalic                   gui=italic cterm=italic 
+hi def fountainBold                     gui=bold cterm=bold
+hi def fountainBoldItalic               gui=bold,italic cterm=bold,italic       
+hi def link fountainPagebreak           conditional
+hi def link fountainActionForced        normal
+hi def link fountainNotes               comment
+hi def link fountainBoneyard            nontext 
+hi def link fountainHeader1             CursorLineNr    
+hi def link fountainHeader2             CursorLineNr    
+hi def link fountainHeader3             CursorLineNr    
+hi def link fountainHeader4             CursorLineNr    
+hi def link fountainHeader5             CursorLineNr    
+hi def link fountainHeader6             CursorLineNr    
+hi def link fountainSynopses            number
+hi def link fountainSceneNumber         number  
 
 function! FountainFolds()
   let thisline = getline(v:lnum)
